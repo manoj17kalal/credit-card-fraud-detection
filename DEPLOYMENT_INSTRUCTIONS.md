@@ -1,26 +1,24 @@
-# GitHub Deployment Instructions
+# Streamlit App Deployment Instructions
 
 Author: Manoj Kalal
 
-## Steps to Deploy to GitHub
+## IMPORTANT: Streamlit Apps Cannot Run on GitHub Pages!
 
-### 1. Create GitHub Repository
+**GitHub Pages only serves static files, but Streamlit apps require a server to run. You need to deploy to Streamlit Community Cloud instead.**
 
-1. Go to [GitHub.com](https://github.com) and sign in to your account
-2. Click the "+" icon in the top right corner and select "New repository"
-3. Repository name: `credit-card-fraud-detection`
-4. Description: `Real-time Credit Card Fraud Detection System with Streamlit Dashboard and CSV Upload`
-5. Set as **Public** repository (for LinkedIn showcase)
-6. **DO NOT** initialize with README, .gitignore, or license (we already have these)
-7. Click "Create repository"
+## Steps to Deploy to Streamlit Community Cloud (FREE)
 
-### 2. Connect Local Repository to GitHub
+### 1. Create GitHub Repository (Already Done)
 
-After creating the repository on GitHub, run these commands in your terminal:
+✅ Your repository is already created at: `https://github.com/manoj17kalal/credit-card-fraud-detection`
+
+### 2. Push Your Code to GitHub
+
+Run these commands in your terminal:
 
 ```bash
-# Add the remote origin (replace YOUR_USERNAME with your GitHub username)
-git remote add origin https://github.com/YOUR_USERNAME/credit-card-fraud-detection.git
+# Add the remote origin
+git remote add origin https://github.com/manoj17kalal/credit-card-fraud-detection.git
 
 # Rename the default branch to main (if needed)
 git branch -M main
@@ -28,6 +26,25 @@ git branch -M main
 # Push the code to GitHub
 git push -u origin main
 ```
+
+### 3. Deploy to Streamlit Community Cloud
+
+1. **Go to Streamlit Community Cloud**: Visit [share.streamlit.io](https://share.streamlit.io)
+2. **Sign up/Login**: Use your GitHub account to sign up
+3. **Authorize GitHub**: Allow Streamlit to access your GitHub repositories
+4. **Create New App**: Click "New app" button
+5. **Fill App Details**:
+   - Repository: `manoj17kalal/credit-card-fraud-detection`
+   - Branch: `main`
+   - Main file path: `dashboard/streamlit_app.py`
+6. **Deploy**: Click "Deploy!" button
+
+### 4. Your Live App URL
+
+After deployment, your app will be available at:
+`https://manoj17kalal-credit-card-fraud-detection-dashboardstreamlit-app-xyz123.streamlit.app/`
+
+(The exact URL will be provided by Streamlit Community Cloud)
 
 ### 3. Repository Structure
 
@@ -73,8 +90,8 @@ credit-card-fraud-detection/
 
 ### 5. LinkedIn Showcase Tips
 
-1. **Repository URL**: `https://github.com/YOUR_USERNAME/credit-card-fraud-detection`
-2. **Live Demo**: Run locally with `streamlit run dashboard/streamlit_app.py`
+1. **Repository URL**: `https://github.com/manoj17kalal/credit-card-fraud-detection`
+2. **Live Demo**: Your deployed Streamlit app URL (from Streamlit Community Cloud)
 3. **Key Technologies**: Python, Streamlit, Kafka, SQLite, Docker, FastAPI
 4. **Highlight**: CSV upload feature for batch fraud analysis
 5. **Screenshots**: Include dashboard screenshots in your LinkedIn post
@@ -108,11 +125,15 @@ streamlit run dashboard/streamlit_app.py
 
 📊 The system can process thousands of transactions and identify fraudulent patterns in real-time, helping financial institutions protect their customers.
 
-🔗 GitHub: https://github.com/YOUR_USERNAME/credit-card-fraud-detection
+🔗 GitHub: https://github.com/manoj17kalal/credit-card-fraud-detection
+🌐 Live Demo: [Your Streamlit App URL]
 
 #MachineLearning #FraudDetection #Python #Streamlit #DataScience #FinTech
 ```
 
 ---
 
-**Note**: Replace `YOUR_USERNAME` with your actual GitHub username in all commands and URLs.
+**Important Notes:**
+- GitHub Pages cannot host Streamlit apps - use Streamlit Community Cloud instead
+- Your live app URL will be provided after deploying to Streamlit Community Cloud
+- Make sure your repository is public for Streamlit Community Cloud deployment
