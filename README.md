@@ -166,8 +166,8 @@ Prefect Cloud (free tier) is used to:
 
 ## 🌐 Live Dashboard
 
-Access the live dashboard at: [https://credit-card-fraud-detection.streamlit.app/](https://credit-card-fraud-detection.streamlit.app/)
-
+Access the live dashboard at: [[https://credit-card-fraud-detection.streamlit.app/](https://credit-card-fraud-detection.streamlit.app/)
+](https://credit-card-fraud-detection-conws2xksv4es4whowjyxo.streamlit.app/)
 ## 📱 Screenshots
 
 ### Dashboard
