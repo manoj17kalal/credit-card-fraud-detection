@@ -1,13 +1,15 @@
 # 🚨 URGENT: Streamlit Cloud Deployment Fix
 
 ## Problem Identified
-Your Streamlit app deployment failed because the `requirements.txt` file contained heavy dependencies that are incompatible with Streamlit Community Cloud's resource limits:
+Your Streamlit app deployment failed due to two issues:
 
-- `pyspark` (too heavy for cloud deployment)
-- `apache-airflow` (not needed for basic Streamlit app)
-- `kafka-python` (not used in the Streamlit dashboard)
-- `google-cloud-bigquery` (not needed for SQLite version)
-- Other unnecessary dependencies
+1. **Heavy dependencies** incompatible with Streamlit Community Cloud:
+   - `pyspark` (too heavy for cloud deployment)
+   - `apache-airflow` (not needed for basic Streamlit app)
+   - `kafka-python` (not used in the Streamlit dashboard)
+   - `google-cloud-bigquery` (not needed for SQLite version)
+
+2. **Invalid package version**: `fpdf2>=3.0.0` doesn't exist (latest is 2.8.3)
 
 ## ✅ Solution Applied
 I've streamlined your `requirements.txt` to include only essential dependencies:
@@ -26,7 +28,7 @@ Faker>=18.0.0
 
 # Basic utilities
 python-dotenv>=1.0.0
-fpdf2>=3.0.0
+fpdf2>=2.7.0
 requests>=2.25.0
 ```
 
