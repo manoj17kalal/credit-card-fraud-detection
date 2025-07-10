@@ -1,43 +1,28 @@
-# Core dependencies
-python-dotenv==1.0.0
-pandas==2.0.3
-numpy==1.24.3
+# Core dependencies for Streamlit deployment
+streamlit>=1.28.0
+pandas>=1.5.0
+numpy>=1.21.0
+plotly>=5.0.0
+folium>=0.14.0
+streamlit-folium>=0.13.0
 
 # Data generation
-Faker==18.13.0
+Faker>=18.0.0
 
-# Data streaming
-kafka-python==2.0.2
-websockets==11.0.3
+# Basic utilities
+python-dotenv>=1.0.0
 
-# Processing
-pyspark==3.4.1
+# Optional: Remove heavy dependencies that cause deployment issues
+# kafka-python==2.0.2  # Not needed for basic Streamlit deployment
+# pyspark==3.4.1       # Too heavy for Streamlit Cloud
+# apache-airflow==2.6.3 # Not needed for basic deployment
+# prefect==2.11.3      # Not needed for basic deployment
+# google-cloud-bigquery==3.11.4  # Not needed for SQLite version
+# fastapi==0.100.0     # Not needed for Streamlit-only deployment
+# uvicorn==0.22.0      # Not needed for Streamlit-only deployment
+# pytest==7.4.0        # Not needed for deployment
+# pdfkit==1.0.0        # Requires external dependencies
 
-# Storage
-# Using SQLite (built-in with Python)
-google-cloud-bigquery==3.11.4
-
-# Dashboard
-streamlit==1.24.0
-plotly==5.15.0
-folium==0.14.0
-streamlit-folium==0.13.0
-streamlit-authenticator==0.2.2
-
-# Alerts
-python-telegram-bot==20.3
-
-# Orchestration
-prefect==2.11.3
-apache-airflow==2.6.3
-
-# PDF Export
-fpdf==1.7.2
-pdfkit==1.0.0
-
-# API
-fastapi==0.100.0
-uvicorn==0.22.0
-
-# Testing
-pytest==7.4.0
+# Keep lightweight alternatives
+fpdf2>=3.0.0
+requests>=2.25.0
