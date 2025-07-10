@@ -1,0 +1,43 @@
+# Core dependencies
+python-dotenv==1.0.0
+pandas==2.0.3
+numpy==1.24.3
+
+# Data generation
+Faker==18.13.0
+
+# Data streaming
+kafka-python==2.0.2
+websockets==11.0.3
+
+# Processing
+pyspark==3.4.1
+
+# Storage
+# Using SQLite (built-in with Python)
+google-cloud-bigquery==3.11.4
+
+# Dashboard
+streamlit==1.24.0
+plotly==5.15.0
+folium==0.14.0
+streamlit-folium==0.13.0
+streamlit-authenticator==0.2.2
+
+# Alerts
+python-telegram-bot==20.3
+
+# Orchestration
+prefect==2.11.3
+apache-airflow==2.6.3
+
+# PDF Export
+fpdf==1.7.2
+pdfkit==1.0.0
+
+# API
+fastapi==0.100.0
+uvicorn==0.22.0
+
+# Testing
+pytest==7.4.0

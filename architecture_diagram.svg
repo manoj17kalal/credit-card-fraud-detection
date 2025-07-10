@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="700" viewBox="0 0 1000 700">
+  <!-- Styles -->
+  <style>
+    .component { fill: #f0f8ff; stroke: #4682b4; stroke-width: 2; }
+    .data-store { fill: #e6f2ff; stroke: #4169e1; stroke-width: 2; }
+    .flow { stroke: #708090; stroke-width: 2; marker-end: url(#arrowhead); }
+    .flow-label { font-family: Arial; font-size: 12px; fill: #708090; }
+    .component-label { font-family: Arial; font-size: 14px; font-weight: bold; fill: #2f4f4f; }
+    .component-desc { font-family: Arial; font-size: 12px; fill: #696969; }
+    .title { font-family: Arial; font-size: 24px; font-weight: bold; fill: #2f4f4f; }
+    .subtitle { font-family: Arial; font-size: 16px; fill: #4682b4; }
+    .legend-box { fill: #f5f5f5; stroke: #d3d3d3; stroke-width: 1; }
+    .legend-text { font-family: Arial; font-size: 12px; fill: #696969; }
+  </style>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#708090" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" class="title" text-anchor="middle">Credit Card Fraud Detection System Architecture</text>
+  <text x="500" y="65" class="subtitle" text-anchor="middle">Real-time Data Pipeline with Free Tools</text>
+  
+  <!-- Data Generation -->
+  <rect x="100" y="120" width="160" height="80" rx="10" ry="10" class="component" />
+  <text x="180" y="150" class="component-label" text-anchor="middle">Data Generator</text>
+  <text x="180" y="170" class="component-desc" text-anchor="middle">Python + Faker</text>
+  <text x="180" y="190" class="component-desc" text-anchor="middle">Simulates transactions</text>
+  
+  <!-- Data Streaming -->
+  <rect x="320" y="120" width="160" height="80" rx="10" ry="10" class="component" />
+  <text x="400" y="150" class="component-label" text-anchor="middle">Data Streaming</text>
+  <text x="400" y="170" class="component-desc" text-anchor="middle">Kafka / WebSocket</text>
+  <text x="400" y="190" class="component-desc" text-anchor="middle">Real-time data flow</text>
+  
+  <!-- Real-time Processing -->
+  <rect x="540" y="120" width="160" height="80" rx="10" ry="10" class="component" />
+  <text x="620" y="150" class="component-label" text-anchor="middle">Fraud Detector</text>
+  <text x="620" y="170" class="component-desc" text-anchor="middle">Spark / Pandas</text>
+  <text x="620" y="190" class="component-desc" text-anchor="middle">Applies fraud rules</text>
+  
+  <!-- Database -->
+  <rect x="540" y="280" width="160" height="80" rx="10" ry="10" class="data-store" />
+  <text x="620" y="310" class="component-label" text-anchor="middle">Database</text>
+  <text x="620" y="330" class="component-desc" text-anchor="middle">PostgreSQL</text>
+  <text x="620" y="350" class="component-desc" text-anchor="middle">Stores transactions</text>
+  
+  <!-- Dashboard -->
+  <rect x="320" y="280" width="160" height="80" rx="10" ry="10" class="component" />
+  <text x="400" y="310" class="component-label" text-anchor="middle">Dashboard</text>
+  <text x="400" y="330" class="component-desc" text-anchor="middle">Streamlit</text>
+  <text x="400" y="350" class="component-desc" text-anchor="middle">Real-time visualization</text>
+  
+  <!-- Alerts -->
+  <rect x="760" y="120" width="160" height="80" rx="10" ry="10" class="component" />
+  <text x="840" y="150" class="component-label" text-anchor="middle">Alert System</text>
+  <text x="840" y="170" class="component-desc" text-anchor="middle">Telegram / Email</text>
+  <text x="840" y="190" class="component-desc" text-anchor="middle">Instant notifications</text>
+  
+  <!-- Orchestration -->
+  <rect x="540" y="440" width="160" height="80" rx="10" ry="10" class="component" />
+  <text x="620" y="470" class="component-label" text-anchor="middle">Orchestration</text>
+  <text x="620" y="490" class="component-desc" text-anchor="middle">Prefect / Airflow</text>
+  <text x="620" y="510" class="component-desc" text-anchor="middle">Workflow management</text>
+  
+  <!-- Deployment -->
+  <rect x="320" y="440" width="160" height="80" rx="10" ry="10" class="component" />
+  <text x="400" y="470" class="component-label" text-anchor="middle">Deployment</text>
+  <text x="400" y="490" class="component-desc" text-anchor="middle">Streamlit Cloud</text>
+  <text x="400" y="510" class="component-desc" text-anchor="middle">Railway.app / Render</text>
+  
+  <!-- Flow Connections -->
+  <!-- Generator to Streaming -->
+  <line x1="260" y1="160" x2="320" y2="160" class="flow" />
+  <text x="290" y="150" class="flow-label" text-anchor="middle">1-2s interval</text>
+  
+  <!-- Streaming to Processing -->
+  <line x1="480" y1="160" x2="540" y2="160" class="flow" />
+  <text x="510" y="150" class="flow-label" text-anchor="middle">stream</text>
+  
+  <!-- Processing to Database -->
+  <line x1="620" y1="200" x2="620" y2="280" class="flow" />
+  <text x="640" y="240" class="flow-label" text-anchor="middle">store results</text>
+  
+  <!-- Processing to Alerts -->
+  <line x1="700" y1="160" x2="760" y2="160" class="flow" />
+  <text x="730" y="150" class="flow-label" text-anchor="middle">fraud events</text>
+  
+  <!-- Database to Dashboard -->
+  <line x1="540" y1="320" x2="480" y2="320" class="flow" />
+  <text x="510" y="310" class="flow-label" text-anchor="middle">query</text>
+  
+  <!-- Orchestration to Database -->
+  <line x1="620" y1="440" x2="620" y2="360" class="flow" />
+  <text x="640" y="400" class="flow-label" text-anchor="middle">schedule jobs</text>
+  
+  <!-- Dashboard to Deployment -->
+  <line x1="400" y1="360" x2="400" y2="440" class="flow" />
+  <text x="420" y="400" class="flow-label" text-anchor="middle">host</text>
+  
+  <!-- Legend -->
+  <rect x="760" y="280" width="160" height="120" class="legend-box" />
+  <text x="840" y="300" class="component-label" text-anchor="middle">Legend</text>
+  
+  <rect x="770" y="315" width="20" height="15" class="component" />
+  <text x="800" y="327" class="legend-text" text-anchor="start">Component</text>
+  
+  <rect x="770" y="340" width="20" height="15" class="data-store" />
+  <text x="800" y="352" class="legend-text" text-anchor="start">Data Store</text>
+  
+  <line x1="770" y1="370" x2="790" y2="370" class="flow" />
+  <text x="800" y="372" class="legend-text" text-anchor="start">Data Flow</text>
+  
+  <!-- Fraud Rules Box -->
+  <rect x="760" y="440" width="160" height="120" class="legend-box" />
+  <text x="840" y="460" class="component-label" text-anchor="middle">Fraud Rules</text>
+  <text x="840" y="480" class="legend-text" text-anchor="middle">• High amount (>$5000)</text>
+  <text x="840" y="500" class="legend-text" text-anchor="middle">• Rapid transactions (3+ in 30s)</text>
+  <text x="840" y="520" class="legend-text" text-anchor="middle">• Unusual location</text>
+  <text x="840" y="540" class="legend-text" text-anchor="middle">• Late night spending</text>
+  
+  <!-- Workflow Steps -->
+  <text x="100" y="600" class="component-label" text-anchor="start">Workflow Steps:</text>
+  <text x="100" y="625" class="legend-text" text-anchor="start">1. Generate simulated credit card transactions</text>
+  <text x="100" y="645" class="legend-text" text-anchor="start">2. Stream transactions in real-time</text>
+  <text x="100" y="665" class="legend-text" text-anchor="start">3. Process and apply fraud detection rules</text>
+  <text x="400" y="625" class="legend-text" text-anchor="start">4. Store results in database</text>
+  <text x="400" y="645" class="legend-text" text-anchor="start">5. Send alerts for fraudulent transactions</text>
+  <text x="400" y="665" class="legend-text" text-anchor="start">6. Display real-time dashboard</text>
+  <text x="700" y="625" class="legend-text" text-anchor="start">7. Schedule reports and maintenance</text>
+  <text x="700" y="645" class="legend-text" text-anchor="start">8. Deploy to cloud platforms</text>
+</svg>
