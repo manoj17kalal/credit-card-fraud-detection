@@ -4,8 +4,8 @@
 
 A comprehensive real-time credit card fraud detection system with **CSV upload functionality** that processes transactions in real-time, applies advanced fraud detection rules, stores results in SQLite database, and displays insights on an interactive dashboard with instant alerts.
 
-🚀 **Live Demo**: [https://credit-card-fraud-detection-[your-app-id].streamlit.app](https://share.streamlit.io)
-
+🚀 **Live Demo**: [[https://credit-card-fraud-detection-[your-app-id].streamlit.app](https://share.streamlit.io)
+](https://credit-card-fraud-detection-conws2xksv4es4whowjyxo.streamlit.app/)
 ✨ **Key Features**: CSV Upload, Real-time Processing, Interactive Dashboard, Fraud Alerts, Data Export
 
 ## 📘 Project Summary
